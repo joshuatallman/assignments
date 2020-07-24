@@ -1,0 +1,13 @@
+sentence = input("Enter a sentence to initiate: ")
+
+letters = []
+count = []
+
+for letter in sorted(sentence):
+    if letter not in letters:
+        letters.append(letter)
+        count.append(1)
+    else:
+        count[-1] += 1
+mydict = dict(zip(letters, count))
+print(mydict)
